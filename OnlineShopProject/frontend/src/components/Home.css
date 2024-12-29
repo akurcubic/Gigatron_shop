@@ -1,0 +1,81 @@
+.icons{
+
+    width: 40px;
+    height: 40px
+}
+
+.cont-info{
+
+
+    background-color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 5px;
+
+}
+
+.naj-kategorije{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.div-img-kat{
+
+    border-radius: 100px;
+    background-color: #F2F2F2;
+}
+
+.kat-img{
+
+    width: 120px;
+    height: 120px;
+}
+
+.text-kat{
+
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.popusti-div{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 20px;
+
+}
+
+.akcije-img{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.popusti-div2{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.akcije-img2{
+
+    width: 100%;
+    height: 273px;
+    border-radius: 20px;
+}
+

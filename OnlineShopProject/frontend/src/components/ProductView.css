@@ -1,0 +1,28 @@
+.main-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 80px
+
+}
+
+.picture-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: -100px;
+
+}
+
+.main-img{
+
+    width:60%;
+    height: 30%;
+}
+
+

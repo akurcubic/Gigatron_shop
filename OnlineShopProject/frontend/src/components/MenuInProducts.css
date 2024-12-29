@@ -1,0 +1,20 @@
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Razmak između checkboxa i teksta */
+    margin-bottom: 8px; /* Razmak između redova */
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    background-color: #f2f2f2; /* Boja pozadine */
+    border: 1px solid #aaa3a3; /* Boja okvira checkboxa */
+  }
+  
+  .checkbox-container label {
+    color: #333; /* Boja teksta */
+    font-size: 16px;
+  }
+  
+  
