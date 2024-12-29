@@ -50,7 +50,7 @@ This project utilizes the following technologies:
 ![Single product details](OnlineShopProject/Pictures/SingleProduct.PNG "Single product Details Screenshot")
 
 ### Cart
-![Cart](OnlineShopProject/Pictures/Cart1.PNG "Cart Screenshot")
+![Cart](OnlineShopProject/Pictures/Cart.PNG "Cart Screenshot")
 
 ### Cart
 ![Cart](OnlineShopProject/Pictures/Cart2.PNG "Cart Screenshot")
