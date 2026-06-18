@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Gigatron Web Shop — Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The React single-page application for the **Gigatron Web Shop Clone**, a replica of the
+e-commerce site [Gigatron.rs](https://gigatron.rs). This package contains the user-facing
+storefront: product browsing, filtering, a shopping cart, the checkout flow, and user login.
+
+It talks to the project's Node.js/Express backend over a REST API (see the
+[root README](../../README.md) for the full-stack overview).
+
+---
+
+## Tech Stack
+
+- **React 18** — component-based UI, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **React Router 7** (`react-router-dom`) — client-side routing.
+- **Axios** — HTTP client for talking to the backend API (requests use `withCredentials` for session cookies).
+- **Bootstrap 5** + per-component CSS files — styling.
+- **Swiper** — product image carousels / sliders.
+- **react-range** — the price-range filter slider.
+- **react-modal** — dialogs (e.g. login).
+
+### Routes
+
+| Path | Component | Purpose |
+|------|-----------|---------|
+| `/` | `Home` | Landing page |
+| `/brands/categories/:brandId/:categoryId` | `Products` | Filtered product listing |
+| `/products/:productId` | `ProductView` | Single product details |
+| `/cart` | `CartView` | Shopping cart and ordering |
+| `/profile` | `Profile` | User login / account |
+
+## Features
+
+- **Product display** — listings and a detailed product view with images, price, discounts, and specifications.
+- **Search & filtering** — filter products by category, brand, price range, and specifications.
+- **Cart & checkout** — add/remove items, see a live cart count in the header, view a total, and submit an order with delivery details.
+- **User accounts** — login via the backend session API.
+
+## Getting Started
+
+From this `frontend` directory:
+
+```bash
+npm install   # install dependencies
+npm start     # start the dev server
+```
+
+The app runs at [http://localhost:3000](http://localhost:3000) and reloads on changes.
 
 ## Available Scripts
 
-In the project directory, you can run:
+| Command | Description |
+|---------|-------------|
+| `npm start` | Run the app in development mode at `http://localhost:3000`. |
+| `npm test` | Launch the test runner in interactive watch mode. |
+| `npm run build` | Build an optimized production bundle into the `build/` folder. |
+| `npm run eject` | Eject from Create React App (one-way operation). |
 
-### `npm start`
+## Backend API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The frontend expects the backend to be reachable at `http://localhost:4000`. Key endpoints used:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `GET  /api/categories` and `/api/categories/brands/:id` — navigation data.
+- `GET  /api/products/single_product/:productId` — product details.
+- `GET  /api/products/get_products_from_cart` — current cart.
+- `POST /api/products/add_in_cart/:productId/:count` — add to cart.
+- `DELETE /api/products/delete_in_cart/:productId` — remove from cart.
+- `POST /api/products/make_order` — place an order.
+- `POST /api/users/login` — user login.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
